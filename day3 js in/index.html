@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    pre{
+        font-size: 17px;
+        color: indigo;
+        font-weight: bold;
+        
+    }
+    div{
+        border: 2px solid black;
+        margin: 2px;
+    }
+</style>
+<body>
+    
+   <div> <p> 1. How many operators do we have in JS ?</p>
+
+    <pre>There are different types of JavaScript operators:
+        Arithmetic Operators:
+        1) + addition 
+        2) - subtraction
+        3) *- multiplication
+        4) / - division
+        5) % - modulus
+        6) ++ - increment
+        7) -- - decrement
+        Assignment Operators:
+        1) =
+        2) +=
+        3) -=
+        4) *=
+        5) /=
+        6) %=
+        7) **=
+        
+        Comparison Operators:
+        1) == 
+        2) ===
+        3) !=
+        4) !==
+        5) >
+        6) < 
+        7) >=
+        8) <=
+        9) ?
+        Logical Operators:
+        1) &&
+        2) ||
+        3) !
+        Conditional Operators:</pre></div>
+
+<div><p>2. What are arrow functions?</p> 
+    <p>An arrow function expression is a compact alternative to a traditional function expression, with some semantic 
+        differences and deliberate limitations in usage: Arrow functions don't have their own bindings to this , 
+        arguments , or super , and should not be used as methods.</p>
+<pre>let hello = "";
+    hello = () => {
+      return "Hello World!";
+    }
+    hello();
+
+    output: Hello World!
+</pre>
+    </div>
+
+<div><p>3. Difference between undefined vs not defined vs NaN</p>
+    <p>In JavaScript, they both are related to memory space and there is a very simple difference between them. 
+        If the variable name which is being accessed doesn’t exist in memory space then it would be not defined, 
+        and if exists in memory space but hasn’t been assigned any value till now, then it would be undefined.
+        <br>
+        In JavaScript, NaN is short for "Not-a-Number".
+        In JavaScript, NaN is a number that is not a legal number.
+        The Number.isNaN() method returns true if the value is NaN, and the type is a Number.</p>
+    
+    <pre>let x;
+        if (x === undefined) {
+          text = "x is undefined";
+        } else {
+          text = "x is defined";
+        }
+        console.log(text)
+    
+        output: x is undefined
+    </pre>
+    
+    <pre>console.log (a)
+
+        output:not defined
+    </pre>
+    
+    <pre>let y = NaN;
+        console.log(y)
+
+    output: NaN</pre>
+</div>
+
+<div><p>4. What is callback hell</p>
+    <p>The phenomenon which happens when we nest multiple callbacks within a function is called a callback hell. 
+        The shape of the resulting code structure resembles a pyramid and hence callback hell is also called the 
+        “pyramid of the doom”. It makes the code very difficult to understand and maintain.</p>
+    <pre>function CallBackDemo() {
+        CallBackDemo1()
+        function CallBackDemo1() {
+            CallBackDemo2()
+            function CallBackDemo2() {
+                CallBackDemo3()
+                function CallBackDemo3() {
+                    CallBackDemo4()
+                    function CallBackDemo4() {
+                        console.log("Callback Functon");
+                    }
+                }
+            }
+        }
+    }
+    CallBackDemo()
+
+    output:Callback Function
+    </pre>
+</div>
+
+<div><p>5. Please explain Self Invoking Function and its code</p>
+    <p>A self-invoking expression is invoked (started) automatically, without being called. Function expressions 
+        will execute automatically if the expression is followed by (). You cannot self-invoke a function declaration.</p>
+    <pre>(function () {
+        console.log("Hello! I called myself")
+        })();
+
+        output: Hello! I called myself
+    </pre>
+</div>
+
+<div><p>6. What is the use of setTimeout</p>
+    <p>setTimeout() The global setTimeout() method sets a timer which executes a function 
+        or specified piece of code once the timer expires.</p>
+    <pre>const myTimeout = setTimeout(myGreeting, 5000);
+         function myGreeting() {
+          console.log("Happy Birthday!")
+         }
+
+         output: Happy Birthday! after 5sec
+    </pre>
+    </div>
+
+
+
+
+
+
+<script src="./main.js"></script>
+</body>
+</html>
+
+
+
